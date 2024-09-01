@@ -22,7 +22,7 @@ st.title("Katrina Dela Peña's Portfolio")
 
 # Create a sidebar for navigation
 st.sidebar.header("Navigation")
-page = st.sidebar.radio("Select a page", ["Autobiography", "Portfolio", "Contact"])
+page = st.sidebar.radio("Select a page", ["Autobiography", "Portfolio"])
 
 # Autobiography page
 if page == "Autobiography":
@@ -70,24 +70,6 @@ elif page == "Portfolio":
         enabling a personalized and intuitive way to manage and explore creative ideas.
         """)
         st.markdown('</div>', unsafe_allow_html=True)
-
-# Contact page
-elif page == "Contact":
-    st.header("Contact Me")
-    st.write("If you'd like to get in touch, feel free to reach out through the following channels:")
-
-    st.markdown("""
-    - **Email:** [delapenakatrina822@gmail.com](mailto:delapenakatrina822@gmail.com)
-    - **GitHub:** [github.com/Kayegdp0802](https://github.com/Kayegdp0802)
-    """)
-
-    # Contact form
-    st.subheader("Send me a message")
-    contact_name = st.text_input("Your Name", placeholder="Enter your name")
-    contact_email = st.text_input("Your Email", placeholder="Enter your email")
-    contact_message = st.text_area("Your Message", placeholder="Write your message here")
-    if st.button("Send Message"):
-        st.write("Thank you for your message! I'll get back to you soon.")
 
 # Footer
 st.markdown("""
